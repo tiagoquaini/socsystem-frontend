@@ -3,7 +3,7 @@
   "use strict";
 
   angular.module("socsystem", [
-    'ui.router',
+    'ui.router', 'pascalprecht.translate',
   ])
   .config(
     [
