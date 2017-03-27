@@ -1,0 +1,21 @@
+{
+  "name": "socsystem",
+  "description": "",
+  "version": "0.0.1",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.2.4",
+    "angular": "~1.6.2",
+    "angular-ui-router": "~0.4.2",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "ng-file-upload": "~12.2.13",
+    "angular-ui-mask": "~1.8.7",
+    "angular-translate": "~2.14.0",
+    "bootstrap" : "~3.3.7"
+  },
+  "resolutions": {
+    "angular": "~1.6.2"
+  }
+}

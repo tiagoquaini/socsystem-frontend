@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="socsystem" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="socsystem" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="socsystem" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="socsystem" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SocSystem</title>
+
+  <!--build:css /assets/css/app.min.css -->
+  <link rel="stylesheet" href="/bower_components/semantic-ui/dist/semantic.css">
+  
+  <link rel="stylesheet" href="/assets/css/sass-socsystem-style.css">
+  <!-- endbuild -->
+
+  <script type="text/javascript">
+    window.devEnv = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+  </script>
+
+  <!--build:js /scripts/vendor.min.js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower_components/angular-translate/angular-translate.js"></script>
+  <!-- endbuild -->
+
+</head>
+<body>
+  <div ui-view></div>
+
+  <!--build:js /scripts/app.min.js -->
+  <script src="/scripts/app.js"></script>
+
+  <script src="/scripts/controllers/homeController.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
