@@ -11,7 +11,7 @@
 <div class="container main-container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <form role="form" method="POST" action="#">
+            <form role="form">
                 <legend class="text-center">Criar conta</legend>
                 <fieldset>
                     <div class="form-group col-md-12">
@@ -29,7 +29,7 @@
                 </fieldset>
                 <div class="form-group">
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary" ng-click="createUser()">
+                        <button class="btn btn-primary" ng-click="createUser()" ng-disabled="disableRegisterBtn()">
                             Registrar-se
                         </button>
                     </div>
@@ -41,3 +41,22 @@
         </div>
     </div>
 </div>
+
+<!-- MODALS -->
+<div class="modal fade error-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Erro!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Ocorreu um erro ao criar o usuário.</p>
+        <p>Tente novamente.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
