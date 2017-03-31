@@ -2,7 +2,7 @@
 Frontend application for Unisinos' project.
 
 ## Project dependencies
-**npm** & **gulp**
+**npm**, **gulp** & **bower**
 
 ## Installing dependencies
 ``npm install``
