@@ -47,6 +47,9 @@
             '' : {
               templateUrl : '/views/home.html?$$REVISION$$',
               controller : 'HomeController'
+            },
+            'header@home' : {
+              templateUrl : '/views/header.html?$$REVISION$$'
             }
           }
         });
