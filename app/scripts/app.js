@@ -25,14 +25,7 @@
         $translateProvider.useSanitizeValueStrategy('escaped');
 
         $translateProvider.determinePreferredLanguage(function(){
-          //get the language of the browser or language selected by user
-          var localStorageLang = null;
-          if (window.localStorage) {
-            localStorageLang = window.localStorage.getItem("preferredLanguage");
-          }
-          var lang = localStorageLang || window.navigator.userLanguage || window.navigator.language;
-          //if it is not portuguese, then return english
-          return lang === 'pt-BR' ? 'pt-BR' : 'en-US';
+          return 'pt-BR';
         });
 
         $translateProvider.useStaticFilesLoader({
