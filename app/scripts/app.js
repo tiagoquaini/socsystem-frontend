@@ -47,9 +47,24 @@
             '' : {
               templateUrl : '/views/home.html?$$REVISION$$',
               controller : 'HomeController'
-            },
-            'header@home' : {
-              templateUrl : '/views/header.html?$$REVISION$$'
+            }
+          }
+        })
+        .state('login', {
+          url: "/entrar",
+          views: {
+            '' : {
+              templateUrl : '/views/login.html?$$REVISION$$',
+              controller : 'LoginController'
+            }
+          }
+        })
+        .state('signup', {
+          url: "/registrar",
+          views: {
+            '' : {
+              templateUrl : '/views/signup.html?$$REVISION$$',
+              controller : 'SignupController'
             }
           }
         });
