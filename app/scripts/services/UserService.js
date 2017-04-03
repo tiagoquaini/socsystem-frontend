@@ -13,7 +13,7 @@
         return oUser;
       };
 
-      oUserService.login = function(sName, sPassword) {
+      oUserService.login = function(oUser) {
         if (oUserService.oUser) {
           return oUserService.oUser;
         }
