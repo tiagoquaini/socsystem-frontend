@@ -6,14 +6,14 @@
   "repository": "",
   "license": "MIT",
   "scripts": {
-    "start" : "gulp serve-dev",
+    "start": "gulp serve-dev",
     "postinstall": "bower install",
     "pretest": "npm install"
   },
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.3.1",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
     "gulp-connect": "^5.0.0",
     "gulp-jshint": "^2.0.1",

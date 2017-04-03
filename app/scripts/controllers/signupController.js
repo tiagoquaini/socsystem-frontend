@@ -2,8 +2,8 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('SignupController', ['$scope', 'UserService',
-    function( $scope, UserService ) {
+  angular.module('socsystem').controller('SignupController', ['$scope', '$state', 'UserService',
+    function( $scope, $state, UserService ) {
 
       $scope.disableRegisterBtn = function() {
         if (!$scope.name || $scope.name.trim() === "" 
@@ -18,8 +18,8 @@
         $(".error-modal").modal();
       }
 
-      function _userCreateSuccess(oUser) {
-
+      function _userCreateSuccess() {
+        $state.go("home");
       }
 
       $scope.createUser = function() {

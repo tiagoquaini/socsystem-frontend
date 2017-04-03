@@ -24,7 +24,7 @@ function createProxy() {
     var proxy = require('proxy-middleware');
 
     var options;
-    options = url.parse('http://localhost:3000/api/');
+    options = url.parse('http://localhost:3000/');
     options.route = '/api/';
     var apiProxy = proxy(options);
 

@@ -8,7 +8,9 @@
 
     oConstants.URL_BACKEND = "/api";
 
-    oConstants.URL_USERS = oConstants.URL_BACKEND + "/users";
+    oConstants.URL_LOGIN = oConstants.URL_BACKEND + "/auth/login";
+    oConstants.URL_LOGOUT = oConstants.URL_BACKEND + "/auth/logout";
+    oConstants.URL_SIGNUP = oConstants.URL_BACKEND + "/auth/signup";
 
     return oConstants;
 
