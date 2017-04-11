@@ -8,16 +8,27 @@
         oUser : null
       };
 
-      var fnSetUser = function(oUser) {
-        oUserService.oUser = oUser;
-        return oUser;
+      var fnSetUser = function(res) {
+        oUserService.oUser = res.data;
+        return oUserService.oUser;
+      };
+
+      var fnUnsetUser = function() {
+        oUserService.oUser = null;
+      };
+
+      oUserService.getLoggedUser = function() {
+        return oUserService.oUser;
       };
 
       oUserService.login = function(oUser) {
-        if (oUserService.oUser) {
-          return oUserService.oUser;
-        }
-        return ConnectorWebService.post(CONSTANTS.URL_LOGIN, oUser);
+        return ConnectorWebService.post(CONSTANTS.URL_LOGIN, oUser)
+        .then(fnSetUser);
+      };
+
+      oUserService.logout = function() {
+        return ConnectorWebService.get(CONSTANTS.URL_LOGOUT)
+        .then(fnUnsetUser);
       };
 
       oUserService.createUser = function(oUser) {

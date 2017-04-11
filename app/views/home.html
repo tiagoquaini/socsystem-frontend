@@ -4,7 +4,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -14,12 +14,27 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li>
+        <li ng-hide="user">
           <a ui-sref="login">Entrar</a>
         </li>
-        <li>
+        <li ng-hide="user">
           <a ui-sref="signup">Criar conta</a>
         </li>
+        <li>
+          <div class="dropdown user-dropdown" ng-show="user">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              {{user.name}}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownUser">
+              <li><a ui-sref="shoppingCart">Carrinho</a></li>
+              <li><a ui-sref="wishlist">Lista de desejos</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a ng-click="logout()">Sair</a></li>
+            </ul>
+          </div>
+        </li>
+
       </ul>
     </div>
     <!-- /.navbar-collapse -->
