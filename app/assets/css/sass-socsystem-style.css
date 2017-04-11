@@ -13,9 +13,12 @@
     height: 0;
     line-height: 0; }
 
-.home-img {
+.home .home-img {
   filter: brightness(80%);
   max-width: 100%; }
+
+.home .product-item img {
+  max-width: 20rem; }
 
 .wishlist-table img {
   max-width: 10rem; }

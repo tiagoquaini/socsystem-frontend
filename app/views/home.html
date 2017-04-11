@@ -31,7 +31,7 @@
 </nav>
 
 <!-- Page Content -->
-<div class="container main-container">
+<div class="container main-container home">
 
   <img src="../assets/img/home.jpg" class="home-img">
 
@@ -48,53 +48,15 @@
   <!-- Page Features -->
   <div class="row text-center">
 
-    <div class="col-md-3 col-sm-6 hero-feature">
+    <div class="col-md-3 col-sm-6 product-item" ng-repeat="product in aProducts">
       <div class="thumbnail">
-        <img src="http://placehold.it/800x500" alt="">
+        <img ng-src="{{product.img}}" alt="">
         <div class="caption">
-          <h3>Feature Label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <h3>{{product.title}}</h3>
+          <p>{{product.description}}</p>
           <p>
-            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 hero-feature">
-      <div class="thumbnail">
-        <img src="http://placehold.it/800x500" alt="">
-        <div class="caption">
-          <h3>Feature Label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>
-            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 hero-feature">
-      <div class="thumbnail">
-        <img src="http://placehold.it/800x500" alt="">
-        <div class="caption">
-          <h3>Feature Label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>
-            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 hero-feature">
-      <div class="thumbnail">
-        <img src="http://placehold.it/800x500" alt="">
-        <div class="caption">
-          <h3>Feature Label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <p>
-            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+            <a href="#" class="btn btn-primary">Comprar</a>
+            <a href="#" class="btn btn-default">Saiba mais</a>
           </p>
         </div>
       </div>
