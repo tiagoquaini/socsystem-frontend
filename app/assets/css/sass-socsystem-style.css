@@ -19,3 +19,12 @@
     background: transparent;
     color: #9d9d9d;
     border: none; }
+
+.wishlist-table img {
+  max-width: 10rem; }
+
+.wishlist-table .remove-btn {
+  border: none; }
+
+.wishlist-table td {
+  vertical-align: middle !important; }

@@ -60,6 +60,15 @@
               controller : 'SignupController'
             }
           }
+        })
+        .state('wishlist', {
+          url: "/lista-desejos",
+          views: {
+            '' : {
+              templateUrl : '/views/wishlist.html?$$REVISION$$',
+              controller : 'WishlistController'
+            }
+          }
         });
 
         $urlRouterProvider.otherwise('/');
