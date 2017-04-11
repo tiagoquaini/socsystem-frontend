@@ -1,0 +1,12 @@
+<div class="dropdown user-dropdown" ng-show="user">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    {{user.name}}
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownUser">
+    <li><a ui-sref="shoppingCart" ng-hide="hideCartOption">Carrinho</a></li>
+    <li><a ui-sref="wishlist" ng-hide="hideWishlistOption">Lista de desejos</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a ng-click="logout()">Sair</a></li>
+  </ul>
+</div>

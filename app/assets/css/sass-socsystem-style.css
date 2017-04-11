@@ -13,13 +13,6 @@
     height: 0;
     line-height: 0; }
 
-.user-dropdown {
-  padding-top: 8px; }
-  .user-dropdown .btn {
-    background: transparent;
-    color: #9d9d9d;
-    border: none; }
-
 .wishlist-table img {
   max-width: 10rem; }
 
@@ -28,3 +21,10 @@
 
 .wishlist-table td {
   vertical-align: middle !important; }
+
+.user-dropdown {
+  padding-top: 8px; }
+  .user-dropdown .btn {
+    background: transparent;
+    color: #9d9d9d;
+    border: none; }

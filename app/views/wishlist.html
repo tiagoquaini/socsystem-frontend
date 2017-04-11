@@ -21,18 +21,7 @@
           <a ui-sref="signup">Criar conta</a>
         </li>
         <li>
-          <div class="dropdown user-dropdown" ng-show="user">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              {{user.name}}
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownUser">
-              <li><a ui-sref="shoppingCart">Carrinho</a></li>
-              <li><a ui-sref="wishlist">Lista de desejos</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a ng-click="logout()">Sair</a></li>
-            </ul>
-          </div>
+          <user-dropdown hide-wishlist-option="true"></user-dropdown>
         </li>
 
       </ul>

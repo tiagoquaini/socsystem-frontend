@@ -6,14 +6,6 @@
     function( $scope, UserService ) {
 
       $scope.user = UserService.getLoggedUser();
-      
-      function _logoutSuccess() {
-        $scope.user = null;
-      }
-
-      $scope.logout = function() {
-        UserService.logout().then(_logoutSuccess);
-      };
 
     }
   ]);
