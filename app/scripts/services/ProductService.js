@@ -1,0 +1,20 @@
+(function(){
+
+  "use strict";
+  angular.module('socsystem').factory('ProductService', ['ConnectorWebService', 'CONSTANTS',
+    function(ConnectorWebService, CONSTANTS) {
+
+      var oProductService = {};
+
+      oProductService.getAllProducts = function() {
+        return ConnectorWebService.get(CONSTANTS.URL_PRODUCTS);
+      };
+
+      oProductService.createProduct = function(oProduct) {
+        return ConnectorWebService.post(CONSTANTS.URL_PRODUCTS, oProduct);
+      };
+
+      return oProductService;
+    }
+  ]);
+})();

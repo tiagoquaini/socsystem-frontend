@@ -2,8 +2,8 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('ProductListDashboardController', ['$scope', '$state', 'UserService',
-    function( $scope, $state, UserService ) {
+  angular.module('socsystem').controller('ProductListDashboardController', ['$scope', '$state', 'ProductService',
+    function( $scope, $state, ProductService ) {
 
       $scope.newProductClick = function() {
         $scope.newProduct = {};
@@ -17,33 +17,27 @@
         return !bComplete;
       };
 
-      $scope.aProducts = [
-        {
-          img: "../assets/img/camiseta1.jpg",
-          name: "aaa",
-          description: "bbb",
-          price: "50,30"
-        },
-        {
-          img: "../assets/img/camiseta1.jpg",
-          name: "aaa",
-          description: "bbb",
-          price: "50,30"
-        },
-        {
-          img: "../assets/img/camiseta1.jpg",
-          name: "aaa",
-          description: "bbb",
-          price: "50,30"
-        },
-        {
-          img: "../assets/img/camiseta1.jpg",
-          name: "aaa",
-          description: "bbb",
-          price: "50,30"
-        }
-      ];
+      function _createProductSuccess(res) {
+        $scope.aProducts.push(res.data);
+        $(".new-product-modal").modal("hide");
+      }
 
+      function _createProductError(oData) {
+        debugger;
+      }
+
+      $scope.createProduct = function() {
+        ProductService.createProduct($scope.newProduct)
+        .then(_createProductSuccess)
+        .catch(_createProductError);
+      };
+
+      function _receiveAllProducts(aProducts) {
+        $scope.aProducts = aProducts;
+      }
+
+      ProductService.getAllProducts().then(_receiveAllProducts);
+      
     }
   ]);
 })();
