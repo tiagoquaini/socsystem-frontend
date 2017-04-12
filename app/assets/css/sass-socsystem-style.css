@@ -29,6 +29,14 @@
 .wishlist-table td {
   vertical-align: middle !important; }
 
+.product-list {
+  margin-top: 2rem; }
+  .product-list .jumbotron {
+    padding: 1rem;
+    text-align: center; }
+  .product-list .media-object {
+    max-width: 10rem; }
+
 .user-dropdown {
   padding-top: 8px; }
   .user-dropdown .btn {

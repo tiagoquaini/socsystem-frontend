@@ -69,6 +69,25 @@
               controller : 'WishlistController'
             }
           }
+        })
+        .state('adminDashboard', {
+          url: "/admin-dashboard",
+          views: {
+            '' : {
+              templateUrl : '/views/dashboard/adminDashboard.html?$$REVISION$$',
+              controller : 'AdminDashboardController'
+            }
+          }
+        })
+        .state('adminDashboard.productList', {
+          parent : "adminDashboard",
+          url: "",
+          views: {
+            'productList@adminDashboard' : {
+              templateUrl : '/views/dashboard/productList.html?$$REVISION$$',
+              controller : 'ProductListDashboardController'
+            }
+          }
         });
 
         $urlRouterProvider.otherwise('/');
