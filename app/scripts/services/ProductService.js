@@ -14,6 +14,10 @@
         return ConnectorWebService.post(CONSTANTS.URL_PRODUCTS, oProduct);
       };
 
+      oProductService.deleteProduct = function(sID) {
+        return ConnectorWebService.fnDelete(CONSTANTS.URL_PRODUCTS + "/" + sID);
+      };
+
       return oProductService;
     }
   ]);

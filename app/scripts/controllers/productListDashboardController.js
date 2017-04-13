@@ -5,6 +5,12 @@
   angular.module('socsystem').controller('ProductListDashboardController', ['$scope', 'ProductService',
     function( $scope, ProductService ) {
 
+      function _getAllProducts() {
+        ProductService.getAllProducts().then(_receiveAllProducts);
+      }
+
+      _getAllProducts();
+
       $scope.newProductClick = function() {
         $scope.newProduct = {};
         $(".new-product-modal").modal();
@@ -27,11 +33,14 @@
         .then(_createProductSuccess);
       };
 
+      $scope.deleteProduct = function(oProduct) {
+        ProductService.deleteProduct(oProduct._id)
+        .then(_getAllProducts);
+      };
+
       function _receiveAllProducts(aProducts) {
         $scope.aProducts = aProducts;
       }
-
-      ProductService.getAllProducts().then(_receiveAllProducts);
 
     }
   ]);
