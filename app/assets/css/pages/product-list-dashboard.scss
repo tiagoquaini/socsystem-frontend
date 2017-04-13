@@ -9,4 +9,21 @@
   .media-object {
     max-width: 10rem;
   }
+
+  .media-body {
+    position: relative;
+
+    .btn {
+      position: absolute;
+      top: 2.5rem;
+
+      &.edit {
+        right: 6rem;
+      }
+
+      &.remove {
+        right: 1rem;
+      }
+    }
+  }
 }

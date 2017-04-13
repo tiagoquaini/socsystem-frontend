@@ -36,6 +36,15 @@
     text-align: center; }
   .product-list .media-object {
     max-width: 10rem; }
+  .product-list .media-body {
+    position: relative; }
+    .product-list .media-body .btn {
+      position: absolute;
+      top: 2.5rem; }
+      .product-list .media-body .btn.edit {
+        right: 6rem; }
+      .product-list .media-body .btn.remove {
+        right: 1rem; }
 
 .user-dropdown {
   padding-top: 8px; }

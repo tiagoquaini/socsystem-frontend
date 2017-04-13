@@ -2,8 +2,8 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('ProductListDashboardController', ['$scope', '$state', 'ProductService',
-    function( $scope, $state, ProductService ) {
+  angular.module('socsystem').controller('ProductListDashboardController', ['$scope', 'ProductService',
+    function( $scope, ProductService ) {
 
       $scope.newProductClick = function() {
         $scope.newProduct = {};
@@ -22,14 +22,9 @@
         $(".new-product-modal").modal("hide");
       }
 
-      function _createProductError(oData) {
-        debugger;
-      }
-
       $scope.createProduct = function() {
         ProductService.createProduct($scope.newProduct)
-        .then(_createProductSuccess)
-        .catch(_createProductError);
+        .then(_createProductSuccess);
       };
 
       function _receiveAllProducts(aProducts) {
@@ -37,7 +32,7 @@
       }
 
       ProductService.getAllProducts().then(_receiveAllProducts);
-      
+
     }
   ]);
 })();
