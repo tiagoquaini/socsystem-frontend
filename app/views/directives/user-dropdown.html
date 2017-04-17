@@ -4,6 +4,8 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownUser">
+    <li><a ui-sref="adminDashboard" ng-show="user.admin">Admin Dashboard</a></li>
+    <li role="separator" class="divider" ng-show="user.admin"></li>
     <li><a ui-sref="shoppingCart" ng-hide="hideCartOption">Carrinho</a></li>
     <li><a ui-sref="wishlist" ng-hide="hideWishlistOption">Lista de desejos</a></li>
     <li role="separator" class="divider"></li>
