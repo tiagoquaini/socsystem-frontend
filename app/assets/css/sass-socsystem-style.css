@@ -55,6 +55,19 @@
       .product-list .media-body .btn.remove {
         right: 1rem; }
 
+.product-details .product-img {
+  max-width: 50rem; }
+
+.product-details .product-price {
+  margin-top: 3rem; }
+
+.product-details .product-actions {
+  max-width: 60%;
+  margin-top: 5rem; }
+  .product-details .product-actions .btn {
+    display: block;
+    margin-top: 1rem; }
+
 .user-dropdown {
   padding-top: 8px; }
   .user-dropdown .btn {

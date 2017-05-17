@@ -1,0 +1,16 @@
+.product-details {
+  .product-img {
+    max-width: 50rem;
+  }
+  .product-price {
+    margin-top: 3rem;
+  }
+  .product-actions {
+    max-width: 60%;
+    margin-top: 5rem;
+    .btn {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+}
