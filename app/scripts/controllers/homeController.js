@@ -2,10 +2,16 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('HomeController', ['$scope', 'UserService',
-    function( $scope, UserService ) {
+  angular.module('socsystem').controller('HomeController', ['$scope', '$state', 'UserService',
+    function( $scope, $state, UserService ) {
 
       $scope.user = UserService.getLoggedUser();
+
+      $scope.productDetails = function(oProduct) {
+        $state.go("productDetails", {
+          id: oProduct.id
+        });
+      };
 
       $scope.aProducts = [
         {

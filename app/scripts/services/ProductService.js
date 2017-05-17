@@ -6,6 +6,10 @@
 
       var oProductService = {};
 
+      oProductService.getProductById = function(sID) {
+        return ConnectorWebService.get(CONSTANTS.URL_PRODUCTS + "/" + sID);
+      };
+
       oProductService.getAllProducts = function() {
         return ConnectorWebService.get(CONSTANTS.URL_PRODUCTS);
       };
