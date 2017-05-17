@@ -15,6 +15,11 @@
         UserService.logout().then(_logoutSuccess);
       };
 
+      $scope.removeProductClick = function(oProduct) {
+        $scope.oProductToRemove = oProduct;
+        $(".remove-product-modal").modal();
+      };
+
       $scope.aWishlistProducts = [
         {
           img: "../assets/img/camiseta1.jpg",

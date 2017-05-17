@@ -46,7 +46,7 @@
     <tbody>
       <tr ng-repeat="product in aWishlistProducts">
         <td class="col-md-1">
-          <button type="button" class="btn btn-default remove-btn">
+          <button type="button" class="btn btn-default remove-btn" ng-click="removeProductClick(product)">
             <i class="glyphicon glyphicon-remove"></i> 
           </button>
         </td>
