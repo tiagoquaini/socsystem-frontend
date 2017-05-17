@@ -70,6 +70,15 @@
             }
           }
         })
+        .state('products', {
+          url: "/produtos",
+          views: {
+            '' : {
+              templateUrl : '/views/products.html?$$REVISION$$',
+              controller : 'ProductsController'
+            }
+          }
+        })
         .state('adminDashboard', {
           url: "/admin-dashboard",
           views: {
