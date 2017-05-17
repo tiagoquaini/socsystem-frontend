@@ -19,6 +19,16 @@
 .home .product-item img {
   max-width: 20rem; }
 
+.home .home-carousel .carousel-caption {
+  top: 30%; }
+  .home .home-carousel .carousel-caption h1 {
+    font-size: 8rem; }
+  .home .home-carousel .carousel-caption p {
+    font-size: 2rem; }
+
+.home .home-carousel img {
+  filter: brightness(50%); }
+
 .wishlist-table img {
   max-width: 10rem; }
 

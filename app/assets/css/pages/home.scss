@@ -9,4 +9,19 @@
       max-width: 20rem;
     }
   }
+
+  .home-carousel {
+    .carousel-caption {
+      top: 30%;
+      h1 {
+        font-size: 8rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+    }
+    img {
+      filter: brightness(50%);
+    }
+  }
 }
