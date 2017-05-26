@@ -104,7 +104,7 @@
           <p>{{product.description}}</p>
           <p>
             <a href="#" class="btn btn-primary">Comprar R${{product.price}}</a>
-            <a href="" ng-click="productDetails(product)" class="btn btn-default">Saiba mais</a>
+            <a ui-sref="productDetails({id: product._id})"  class="btn btn-default">Saiba mais</a>
           </p>
         </div>
       </div>

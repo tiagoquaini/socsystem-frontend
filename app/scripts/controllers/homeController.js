@@ -7,12 +7,6 @@
 
       $scope.user = UserService.getLoggedUser();
 
-      $scope.productDetails = function(oProduct) {
-        $state.go("productDetails", {
-          id: oProduct.id
-        });
-      };
-
       $scope.aProducts = [];
 
       ProductService.getAllProducts()

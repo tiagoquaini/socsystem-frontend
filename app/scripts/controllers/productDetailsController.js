@@ -14,7 +14,7 @@
       function _receiveProductError() {
         $state.go("products");
       }
-
+      
       ProductService.getProductById($stateParams.id).then(_receiveProduct).catch(_receiveProductError);
 
     }
