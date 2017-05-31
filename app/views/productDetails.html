@@ -43,8 +43,22 @@
       <h3 class="product-price">R$ {{product.price}}</h3>
       <div class="product-actions">
         <a href="" class="btn btn-primary">Comprar</a>
-        <a href="" class="btn btn-primary">Adicionar a lista de desejos</a>
+        <a href="" class="btn btn-primary" ng-click="addToWishlist()">Adicionar a lista de desejos</a>
       </div>
     </div>
   </div>
 </div>
+
+<!-- MODALS -->
+<div class="modal fade add-wishlist-success-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>O produto foi adicionado à sua lista de desejos.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

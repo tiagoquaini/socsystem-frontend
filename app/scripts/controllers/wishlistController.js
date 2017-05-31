@@ -2,8 +2,8 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('WishlistController', ['$scope', 'UserService',
-    function( $scope, UserService ) {
+  angular.module('socsystem').controller('WishlistController', ['$scope', 'UserService', 'WishlistService',
+    function( $scope, UserService, WishlistService ) {
 
       $scope.user = UserService.getLoggedUser();
       
@@ -14,6 +14,10 @@
       $scope.logout = function() {
         UserService.logout().then(_logoutSuccess);
       };
+
+      WishlistService.getWishlist().then(function(res) {
+        $scope.aWishlistProducts = res.products;
+      })
 
       $scope.removeProductClick = function(oProduct) {
         $scope.oProductToRemove = oProduct;
