@@ -33,7 +33,7 @@
 <div class="container main-container">
   <h2>Produtos</h2>
   <div class="row text-center">
-    <div class="col-md-3 col-sm-6 product-item" ng-repeat="product in aProducts">
+    <div class="col-md-3 col-sm-6 product-item" ng-repeat="product in aProducts | limitTo:4">
       <div class="thumbnail">
         <img ng-src="{{product.img}}" alt="">
         <div class="caption">
