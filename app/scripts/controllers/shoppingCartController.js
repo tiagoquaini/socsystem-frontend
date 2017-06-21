@@ -61,9 +61,12 @@
       $scope.confirmCheckout = function() {
         if ($scope.isAllCreditCardFieldsFilled()) {
           ShoppingCartService.confirmPurchase().then(function() {
+            $('.checkout-modal').modal('hide');
+            $("body").removeClass("modal-open");
+            $(".modal-backdrop").remove();
             $state.go("home");
           });
-          $('.checkout-modal').modal('toggle');
+
           return true;
         }
         return false;

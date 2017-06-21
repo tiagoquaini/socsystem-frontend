@@ -66,7 +66,7 @@
       </tr>
     </tbody>
   </table>
-  <div class="subtotal-container">
+  <div class="subtotal-container" ng-show="calculateSubtotal() > 0">
     <h3>Detalhes da compra</h3>
     <span style="display: block;" ng-repeat="product in aShoppingCartProducts" ng-show="product.quantity > 0">{{product.name}}  x{{product.quantity}}</span>
     <hr/>
