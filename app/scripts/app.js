@@ -70,6 +70,15 @@
             }
           }
         })
+        .state('shoppingCart', {
+          url: "/carrinho",
+          views: {
+            '' : {
+              templateUrl : '/views/shoppingCart.html?$$REVISION$$',
+              controller : 'ShoppingCartController'
+            }
+          }
+        })
         .state('products', {
           url: "/produtos",
           views: {

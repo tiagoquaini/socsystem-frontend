@@ -13,6 +13,7 @@
     oConstants.URL_SIGNUP = oConstants.URL_BACKEND + "/auth/signup";
     oConstants.URL_PRODUCTS = oConstants.URL_BACKEND + "/products";
     oConstants.URL_WISHLIST = oConstants.URL_BACKEND + "/wishlists/me";
+    oConstants.URL_SHOPPING_CART = oConstants.URL_BACKEND + "/shoppingCart/me";
 
     return oConstants;
 

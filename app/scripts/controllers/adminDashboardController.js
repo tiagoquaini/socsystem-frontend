@@ -14,9 +14,6 @@
           case 1:
             $state.go("adminDashboard.productList");
             break;
-          case 1:
-            $state.go("adminDashboard.userList");
-            break;
         }
       };
 
@@ -24,10 +21,6 @@
         {
           id: 1,
           title: "Produtos"
-        },
-        {
-          id: 2,
-          title: "Usuários"
         }
       ];
 
