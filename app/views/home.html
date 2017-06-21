@@ -103,7 +103,7 @@
           <h3>{{product.name}}</h3>
           <p>{{product.description}}</p>
           <p>
-            <a href="#" class="btn btn-primary">Comprar R${{product.price}}</a>
+            <a ui-sref="productDetails({id: product._id})" class="btn btn-primary">Comprar R${{product.price}}</a>
             <a ui-sref="productDetails({id: product._id})"  class="btn btn-default">Saiba mais</a>
           </p>
         </div>

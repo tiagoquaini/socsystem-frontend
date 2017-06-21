@@ -2,8 +2,8 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('WishlistController', ['$scope', 'UserService', 'WishlistService',
-    function( $scope, UserService, WishlistService ) {
+  angular.module('socsystem').controller('WishlistController', ['$scope', '$state', 'UserService', 'WishlistService', 'ShoppingCartService',
+    function( $scope, $state, UserService, WishlistService, ShoppingCartService ) {
 
       $scope.user = UserService.getLoggedUser();
       
@@ -30,6 +30,12 @@
 
       $scope.confirmRemoveProduct = function() {
         WishlistService.removeProduct($scope.oProductToRemove).then(_getWishlist);
+      };
+
+      $scope.addToCart = function(oProduct) {
+        ShoppingCartService.addProduct(oProduct).then(function() {
+          $state.go("shoppingCart");
+        });
       };
 
     }
