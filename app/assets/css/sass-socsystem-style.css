@@ -68,6 +68,9 @@
     display: block;
     margin-top: 1rem; }
 
+.product-thumb {
+  max-width: 150px; }
+
 .user-dropdown {
   padding-top: 8px; }
   .user-dropdown .btn {
