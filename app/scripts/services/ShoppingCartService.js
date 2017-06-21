@@ -50,6 +50,10 @@
         return ConnectorWebService.put(CONSTANTS.URL_SHOPPING_CART, aShoppingCart);
       };
 
+      oShoppingCartService.confirmPurchase = function() {
+        return ConnectorWebService.fnDelete(CONSTANTS.URL_SHOPPING_CART);
+      };
+
       return oShoppingCartService;
     }
   ]);

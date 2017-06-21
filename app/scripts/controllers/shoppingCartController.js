@@ -2,8 +2,15 @@
 
   "use strict";
 
-  angular.module('socsystem').controller('ShoppingCartController', ['$scope', 'UserService', 'ShoppingCartService',
-    function( $scope, UserService, ShoppingCartService ) {
+  angular.module('socsystem').controller('ShoppingCartController', ['$scope', '$state', 'UserService', 'ShoppingCartService',
+    function( $scope, $state, UserService, ShoppingCartService ) {
+
+      $scope.oCard = {
+        name: null,
+        cvc: null,
+        number: null,
+        expiration: null
+      };
 
       $scope.user = UserService.getLoggedUser();
       
@@ -45,6 +52,25 @@
 
       $scope.confirmRemoveProduct = function() {
         ShoppingCartService.removeProduct($scope.oProductToRemove).then(_getShoppingCart);
+      };
+
+      $scope.openCheckoutModal = function() {
+        $('.checkout-modal').modal();
+      };
+
+      $scope.confirmCheckout = function() {
+        if ($scope.isAllCreditCardFieldsFilled()) {
+          ShoppingCartService.confirmPurchase().then(function() {
+            $state.go("home");
+          });
+          $('.checkout-modal').modal('toggle');
+          return true;
+        }
+        return false;
+      };
+
+      $scope.isAllCreditCardFieldsFilled = function(){
+        return ($scope.oCard.cvc && $scope.oCard.number && $scope.oCard.name && $scope.oCard.expiration);
       };
 
     }

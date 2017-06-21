@@ -71,7 +71,7 @@
     <span style="display: block;" ng-repeat="product in aShoppingCartProducts" ng-show="product.quantity > 0">{{product.name}}  x{{product.quantity}}</span>
     <hr/>
     <h4>Total: R$ {{calculateSubtotal()}}</h4>
-    <button type="button" class="btn btn-default">Comprar</button>
+    <button type="button" class="btn btn-default" ng-click="openCheckoutModal()">Comprar</button>
   </div>
 </div>
 
@@ -89,6 +89,39 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Não</button>
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="confirmRemoveProduct()">Sim</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade checkout-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Total da compra: R$ {{calculateSubtotal()}}</p>
+        <form>
+          <div class="form-group">
+            <label>Nome completo</label>
+            <input type="text" name="CardName" class="form-control" ng-model="oCard.name">
+          </div>
+          <div class="form-group">
+            <label>Número do cartão</label>
+            <input type="text" name="CardNumber" class="form-control" ng-model="oCard.number">
+          </div>
+          <div class="form-group">
+            <label>Data de expiração</label>
+            <input type="text" placeholder="MM / AAAA" name="CardExpiry" class="form-control" ng-model="oCard.expiration">  
+          <div class="form-group">
+            <label>Código de segurança</label>
+            <input type="text" name="CardCvc" class="form-control" ng-model="oCard.cvc">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="confirmCheckout()">
+          Comprar
+        </button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
